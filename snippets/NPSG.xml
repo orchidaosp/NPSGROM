@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+    
+    <remote name="orchidaosp"
+            fetch="https://github.com/orchidaosp" />
+            
     <remote name="LightningFastRom"
             fetch="https://github.com/LightningFastRom" />
     
@@ -7,7 +11,10 @@
             fetch="https://github.com//Lineage-X" 
             revision="ten" />
     
-    <!-- LineageOS infra stuff, which is not needed -->
+    <!-- This rom is based on lineage os, lighning fast rom, lineage X and Orchidos Rom this base is used to create all over Orchid Project roms many thanks to all developers and creators this work could not have been completed without you -->
+    <!-- Please notify use by email aosporchid@gmail.com if you have any problems with code that is being used -->
+    
+    <!-- LineageOS extras removed -->
     <remove-project path="lineage/contributors-cloud-generator" name="LineageOS/contributors-cloud-generator" groups="tools" revision="master" />
     <remove-project path="lineage/ansible" name="LineageOS/ansible" groups="infra" revision="master" />
     <remove-project path="lineage/charter" name="LineageOS/charter" groups="infra" revision="master" />
@@ -32,66 +39,50 @@
     <remove-project path="lineage-sdk" name="LineageOS/android_lineage-sdk" />
     <project path="lineage-sdk" name="android_lineage-sdk" remote="LightningFastRom" />
     
-    <!-- Replacing LineageOS PackageInstaller/PermissionController with my fork Mode Dark theme by Nevidimka655-->
+    <!-- lightningfastroms fork Mode Dark theme by Nevidimka655-->
     <remove-project path="packages/apps/PermissionController" name="LineageOS/android_packages_apps_PackageInstaller" groups="pdk-cw-fs,pdk-fs" />
     <project path="packages/apps/PermissionController" name="android_packages_apps_PackageInstaller" groups="pdk-cw-fs,pdk-fs" remote="LightningFastRom" />
 
-    <!-- Replacing LineageOS ThemePicker For my fork with even more icon shapes -->
+    <!-- lightningfastroms ThemePicker and extra overlays-->
     <remove-project path="packages/apps/ThemePicker" name="LineageOS/android_packages_apps_ThemePicker" groups="pdk-fs" />
     <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" groups="pdk-fs" remote="LightningFastRom"/>
-    
-    <!-- Add Lightning overlays with new Aholor, Fonts, Icons & even more icon shapes -->
     <project path="packages/overlays/Lightning" name="android_packages_overlays_Lightning" groups="pdk-fs" remote="LightningFastRom"/>
 
-    <!-- Sawapping FMRadio For My Version Witch Now Has Pixel Style Icon from allstargaurav/The-Adaptive-Project -->
-    <!-- <remove-project path="packages/apps/FMRadio" name="LineageOS/android_packages_apps_FMRadio" />
-    <project path="packages/apps/FMRadio" name="LightningFastRom/android_packages_apps_FMRadio" remote="LightningFastRom" /> -->
-
-    <!-- Sawapping Messaging For My Version Witch Now Has Pixel Style Icon from allstargaurav/The-Adaptive-Project -->
+    <!-- lightningfast roms Pixel Style messaging featuring Icon from allstargaurav/The-Adaptive-Project -->
     <remove-project path="packages/apps/Messaging" name="LineageOS/android_packages_apps_Messaging" groups="pdk-fs" />
     <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="LightningFastRom" groups="pdk-fs" />
 
-    <!-- Sawapping Dialer For My Version Witch Now Has Pixel Style Icon from allstargaurav/The-Adaptive-Project -->
-    <remove-project path="packages/apps/Dialer" name="LineageOS/android_packages_apps_Dialer" groups="pdk-fs" />
-    <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="LightningFastRom" groups="pdk-fs" />
-
-    <!-- Sawapping Etar For My Version Witch Now Has Pixel Style Icon from allstargaurav/The-Adaptive-Project -->
-    <remove-project path="packages/apps/Etar" name="LineageOS/android_packages_apps_Etar" />
-    <project path="packages/apps/Etar" name="android_packages_apps_Etar" remote="LightningFastRom" />
-
-    <!-- Sawapping DeskClock For My Version Witch Now Has Pixel Style Icon from allstargaurav/The-Adaptive-Project -->
-    <remove-project path="packages/apps/DeskClock" name="LineageOS/android_packages_apps_DeskClock" groups="pdk-fs" />
-    <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="LightningFastRom" groups="pdk-fs" />
-    
-    <!-- Sawapping ExactCalculator For My Version Witch Now Has Pixel Style Icon from allstargaurav/The-Adaptive-Project -->
-    <remove-project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" groups="pdk-fs" />
-    <project path="packages/apps/ExactCalculator" name="android_packages_apps_ExactCalculator" remote="LightningFastRom" groups="pdk-fs" />
-
-    <!-- Rebrended LineageOS LineageParts -->
+    <!--lightning fast/ orchid os LineageParts -->
     <remove-project path="packages/apps/LineageParts" name="LineageOS/android_packages_apps_LineageParts" />
     <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="LightningFastRom" />
 
-    <!-- Rebrended LineageOS SetupWizard -->
+    <!-- REMOVED LineageOS SetupWizard orchid rom does not carry set up wizards -->
     <remove-project path="packages/apps/SetupWizard" name="LineageOS/android_packages_apps_SetupWizard" />
 
-    <!-- Swapping ineageOS/android_packages_inputmethods_LatinIME With My Repo Since My Fork Control Darkmode Via The System Like iOS & iPadOS-->
+    <!-- IOS STYLE inputmethods_LatinIME BY lightningfastrom -->
     <remove-project path="packages/inputmethods/LatinIME" name="LineageOS/android_packages_inputmethods_LatinIME" groups="pdk-fs" />
     <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" groups="pdk-fs"  remote="LightningFastRom" />
+    
+    <!-- NPSGROM PARTS MADE BY ORCHID OS -->
+    <remove-project path="packages/apps/Settings" name="LineageOS/android_packages_apps_Settings" />
+    <remove-project path="vendor/lineage" name="LineageOS/android_vendor_lineage" />
+    <remove-project path="frameworks/base" name="LineageOS/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" />
+    <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="orchidaosp" revision="test-ten" />
+    <project path="packages/apps/Settings" name="NPSGandroid_packages_apps_Settings" remote="orchidaosp" revision="test-ten" />
+    <project path="packages/apps/Extra" name="android_packages_apps_Extra" remote="orchidaosp" revision="test-ten" />
+    <project path="vendor/lineage" name="android_vendor_lineage" remote="orchidaosp" revision="test-ten" />
+    <project path="vendor/oplauncher" name="android_vendor_oplauncher" remote="orchidaosp" revision="Orchidos" />
+    <project path="vendor/aeonax/ANXCamera" name="android_vendor_aeonax_ANXCamera" remote="orchidaosp" revision="master" />
+    <project path="external/airbnb-lottie" name="external_airbnb-lottie" remote="orchidaosp" revision="test-ten" />
+    <project path="external/motorola/faceunlock" name="external_motorola_faceunlock" remote="lineagex" revision="ten" />
+    <project path="vendor/prebuilts" name="npsg_vendor_prebuilts" remote="orchidaosp" revision="test-ten" />
 
-    <!-- Adding Lightingweather -->
-    <!-- <remove-project path="lineage-sdk/samples/weatherproviderservice/OpenWeatherMapProvider" name="LineageOS/android_packages_apps_OpenWeatherMapProvider" />
-    <remove-project path="packages/providers/WeatherProvider" name="LineageOS/android_packages_providers_WeatherProvider" /> -->
-    <project path="packages/apps/Lightingweather" name="android_packages_apps_lightingweather" remote="LightningFastRom" />
-
-    <!-- Wallpaper & Screensaver -->
-    <!-- Replaced LineageOS android_packages_apps_WallpaperPicker With My Repo For Branding Prepos -->
+    <!-- lightning fast roms WallpaperPicker  -->
     <remove-project path="packages/apps/Backgrounds" name="LineageOS/android_packages_apps_Backgrounds" />
     <project path="packages/apps/Backgrounds" name="android_packages_apps_Backgrounds" remote="LightningFastRom" />
 
-    <!-- Custom Recovery (yay!) -->
+    <!-- finally forked Custom Recovery  -->
     <remove-project path="bootable/recovery" name="LineageOS/android_bootable_recovery" />
     <project path="bootable/recovery" name="android_bootable_recovery" remote="LightningFastRom" />
-
-    <project path="external/motorola/faceunlock" name="external_motorola_faceunlock" remote="lineagex" revision="ten" />
     
 </manifest>
