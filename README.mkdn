@@ -1,1 +1,13 @@
 Orchid test rom
+
+To get started with Android/LineageOS, you'll need to get familiar with Repo and Version Control with Git.
+
+To initialize your local repository using the LineageOS trees, use a command like this:
+
+repo init -u git://github.com/orchidaosp/NPSGROMgit -b NPSGROMTEST
+
+Then to sync up:
+
+repo sync -c -q --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+
+
